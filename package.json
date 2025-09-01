@@ -5,15 +5,30 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node src/express-server.js"
+        "start:old": "node src/express-server.js",
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+        "lint": "eslint 'src/**/*.ts'"
     },
-    "type": "module",
     "author": "",
     "license": "ISC",
     "dependencies": {
         "@lionralfs/discogs-client": "^4.1.3",
+        "cookie-parser": "^1.4.7",
         "cors": "^2.8.5",
         "dotenv": "^17.2.1",
         "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/cookie-parser": "^1.4.9",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.3",
+        "@types/node": "^24.3.0",
+        "eslint": "^9.34.0",
+        "nodemon": "^3.1.10",
+        "prettier": "^3.6.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.2"
     }
 }
