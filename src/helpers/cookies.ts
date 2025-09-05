@@ -9,6 +9,6 @@ export const setCookies = (
     httpOnly: true,
     secure: false, // use only over HTTPS
     sameSite: 'lax', // or 'strict'
-    maxAge: 24 * 60 * 60 * 1000, // 1 day
+    maxAge: 6 * 30 * 24 * 60 * 60 * 1000, // 6 months in milliseconds
   });
 };
